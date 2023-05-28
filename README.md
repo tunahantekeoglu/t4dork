@@ -40,3 +40,22 @@ T4Dork, yasal ve etik penetrasyon testleri için tasarlanmıştır. İzinsiz kul
 ## 👥 Katkıda Bulunma
 
 Bu araç üzerinde iyileştirmeler yapmak isterseniz, lütfen bir 'Pull Request' gönderin veya sorunları 'Issues' kısmına ekleyin. Bu araç topluluğun desteğiyle gelişir!
+
+Tabii ki! İşte README dosyanızın sonuna eklemek için bir taslak:
+
+---
+
+<div align="center">
+
+## Let's Connect! 🚀
+
+<img src="https://img.shields.io/badge/-@tunahantekeoglu-1877F2?style=for-the-badge&logo=Facebook&logoColor=white&link=https://www.facebook.com/tunahantekeoglu/"><br>
+<img src="https://img.shields.io/badge/-@tunahantekeoglu-E4405F?style=for-the-badge&logo=Instagram&logoColor=white&link=https://www.instagram.com/tunahantekeoglu/"><br>
+<img src="https://img.shields.io/badge/-@tunahantekeoglu-1DA1F2?style=for-the-badge&logo=Twitter&logoColor=white&link=https://twitter.com/tunahantekeoglu/"><br>
+<img src="https://img.shields.io/badge/-@tunahantekeoglu-0A66C2?style=for-the-badge&logo=LinkedIn&logoColor=white&link=https://www.linkedin.com/in/tunahantekeoglu/"><br>
+
+### Or Send Me an Email 📩
+
+[![Email](https://img.shields.io/badge/tunahantekeoglu%40gmail.com-D14836?style=for-the-badge&logo=Gmail&logoColor=white)](mailto:tunahantekeoglu@gmail.com)
+
+</div>
