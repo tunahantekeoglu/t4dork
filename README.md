@@ -1,7 +1,3 @@
-Elbette, daha dikkat çekici bir README için işte bir örnek:
-
----
-
 # 🚀 t4dork: Google Dorkları İle Bilgi Toplama Aracı!
 
 ![Banner](banner.png)
