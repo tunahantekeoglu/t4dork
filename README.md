@@ -33,11 +33,11 @@ python3 t4dork.py -u target.com
 
 Bu araç, MIT Lisansı altında yayınlanmıştır. Lütfen detaylar için [LICENSE](LICENSE) dosyasına bakınız.
 
-## ⚠️ Sorumluluk Reddi
+## ⚠️ Sorumluluk Reddi Beyanı
 
 T4Dork, yasal ve etik penetrasyon testleri için tasarlanmıştır. İzinsiz kullanımı yasadışıdır ve bu tür eylemlerden kullanıcı tamamen sorumludur.
 
-## 👥 Katkıda Bulunma
+## 👥 Katkıda Bulunmak İçin
 
 Bu araç üzerinde iyileştirmeler yapmak isterseniz, lütfen bir 'Pull Request' gönderin veya sorunları 'Issues' kısmına ekleyin. Bu araç topluluğun desteğiyle gelişir!
 
