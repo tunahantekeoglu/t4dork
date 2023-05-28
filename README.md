@@ -2,11 +2,11 @@ Elbette, daha dikkat çekici bir README için işte bir örnek:
 
 ---
 
-# 🚀 T4Dork: Google Dorkları İle Bilgi Toplama Aracı!
+# 🚀 t4dork: Google Dorkları İle Bilgi Toplama Aracı!
 
 ![Banner](banner.png)
 
-T4Dork, internetin derinliklerine dalmanın en hızlı yoludur! Google dorklarını kullanarak hedef siteler üzerinde bilgi toplama işlemi gerçekleştiren bir pentesting aracıdır. Hassas bilgileri açığa çıkarma potansiyeline sahip olan bu araç, bilgi güvenliğini sağlamak ve savunmaların zayıf noktalarını belirlemek için etkili bir yöntem sunar.
+t4dork, internetin derinliklerine dalmanın en hızlı yoludur! Google dorklarını kullanarak hedef siteler üzerinde bilgi toplama işlemi gerçekleştiren bir pentesting aracıdır. Hassas bilgileri açığa çıkarma potansiyeline sahip olan bu araç, bilgi güvenliğini sağlamak ve savunmaların zayıf noktalarını belirlemek için etkili bir yöntem sunar.
 
 ![Screenshots](screenshot.png)
 
