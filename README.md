@@ -4,8 +4,6 @@
 
 t4dork, internetin derinliklerine dalmanın en hızlı yoludur! Google dorklarını kullanarak hedef siteler üzerinde bilgi toplama işlemi gerçekleştiren bir pentesting aracıdır. Hassas bilgileri açığa çıkarma potansiyeline sahip olan bu araç, bilgi güvenliğini sağlamak ve savunmaların zayıf noktalarını belirlemek için etkili bir yöntem sunar.
 
-![Screenshots](screenshot.png)
-
 ## 🌟 Özellikler
 
 - 🎯 100'den fazla Google dork'unu otomatik olarak uygular.
