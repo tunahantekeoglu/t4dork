@@ -187,8 +187,6 @@ dorks = [
     'inurl:wp-settings.txt',
 ]
 
-]
-
 def google_dork(target, dork):
     headers = {'User-agent':'Mozilla/11.0'}
     url = f'https://www.google.com/search?q=site:{target}+{dork}'
