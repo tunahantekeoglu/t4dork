@@ -5,7 +5,28 @@ import argparse
 from termcolor import colored
 from colorama import init
 import random
+from termcolor import colored
+from pyfiglet import Figlet
 
+f = Figlet(font='slant')
+
+print(colored(f.renderText('Tunahan TEKEOGLU'), 'red'))
+print(colored(f.renderText('t4dork'), 'white'))
+
+print(colored("""
+==============================================================================================================================================
+Bu araç Tunahan TEKEOGLU tarafından geliştirilmiştir, belirli bir hedef web sitesinde Google dorks kullanarak bilgi toplamaya yardımcı olur.
+Lütfen bu aracı yalnızca yasal ve etik sınırlar içerisinde kullanın.
+Kullanıcı, bu aracın kullanımından doğabilecek her türlü yasal sorumluluğu kabul eder.
+===============================================================================================================================================
+""", 'green'))
+
+print(colored("""
+Sosyal Medya Hesaplarım:
+- Twitter: @tunahantekeoglu
+- LinkedIn: linkedin.com/in/tunahantekeoglu
+- GitHub: github.com/tunahantekeoglu
+""", 'blue'))
 # for colorama to work on Windows
 init()
 
