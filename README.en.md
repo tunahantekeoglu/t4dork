@@ -1,4 +1,4 @@
-Certainly, here is the translated version of the README.md file in English:
+# For Turkish version of README, [click here](README.tr.md).
 
 "# 🚀 t4dork: Information Gathering Tool with Google Dorks!
 
@@ -66,4 +66,4 @@ Of course, below is a new design where you can make the addition you want:
 </div>
 
 ---
-"
+
