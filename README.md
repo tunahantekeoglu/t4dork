@@ -15,19 +15,20 @@ t4dork is the fastest way to dive into the depths of the internet! It is a pente
 - 📝 Provides results in an easily readable format.
 - 👨‍💻 User-friendly command line interface.
 
+
 ## 💻 Installation
 
-The installation of T4Dork is quite simple. Just follow the steps below:
+The installation of T4Dork is straightforward. Just follow the steps below:
 
 ```
-git clone [https://github.com/tunahantekeoglu/t4dork.git]
+git clone https://github.com/tunahantekeoglu/t4dork.git
 cd t4dork
 pip3 install -r requirements.txt
 ```
 
 ## 🎮 Usage
 
-It is very simple to use. Just run the application by specifying the target site:
+It's simple to use. Run the application by specifying the target site:
 
 ```
 python3 t4dork.py -u target.com
@@ -39,6 +40,20 @@ To use with a proxy:
 python3 t4dork.py -u target.com -p http://127.0.0.1:8080
 ```
 
+To use with a proxy list:
+
+```
+python3 t4dork.py -u target.com -pl proxies.txt
+```
+
+**Note:**
+1. When providing a proxy list, ensure that the proxies are up-to-date and operational.
+2. Ensure that the proxies support HTTPS traffic.
+3. If any proxy-related issues are encountered, check the proxies and try using different ones if necessary.
+
+---
+
+Bu şekilde, kullanıcılara proxy listesi özelliği hakkında bilgi verilmiş olacak ve potansiyel sorunlara karşı bilgilendirilmiş olacaklardır.
 ## 📄 License
 
 This tool is published under the MIT License. Please see the [LICENSE](LICENSE) file for details.
