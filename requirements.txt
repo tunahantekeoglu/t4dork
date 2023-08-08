@@ -1,0 +1,7 @@
+requests
+beautifulsoup4
+argparse
+termcolor
+colorama
+pyfiglet
+fake_useragent
