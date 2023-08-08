@@ -5,8 +5,8 @@ import argparse
 from termcolor import colored
 from colorama import init
 import random
-from termcolor import colored
 from pyfiglet import Figlet
+from fake_useragent import UserAgent
 
 f = Figlet(font='slant')
 
@@ -15,19 +15,19 @@ print(colored(f.renderText('t4dork'), 'white'))
 
 print(colored("""
 ==============================================================================================================================================
-Bu araç Tunahan TEKEOGLU tarafından geliştirilmiştir, belirli bir hedef web sitesinde Google dorks kullanarak bilgi toplamaya yardımcı olur.
-Lütfen bu aracı yalnızca yasal ve etik sınırlar içerisinde kullanın.
-Kullanıcı, bu aracın kullanımından doğabilecek her türlü yasal sorumluluğu kabul eder.
-===============================================================================================================================================
+This tool was developed by Tunahan TEKEOGLU and helps in information gathering on a specific target website using Google dorks.
+Please use this tool only within legal and ethical boundaries.
+The user accepts all legal responsibilities that may arise from the use of this tool.
+==============================================================================================================================================
 """, 'green'))
 
 print(colored("""
-Sosyal Medya Hesaplarım:
+My Social Media Accounts:
 - Twitter: @tunahantekeoglu
 - LinkedIn: linkedin.com/in/tunahantekeoglu
 - GitHub: github.com/tunahantekeoglu
 """, 'blue'))
-# for colorama to work on Windows
+
 init()
 
 # Google dorks listesi
@@ -208,40 +208,51 @@ dorks = [
     'inurl:wp-settings.txt',
 ]
 
-def google_dork(target, dork):
-    headers = {'User-agent':'Mozilla/11.0'}
+ua = UserAgent()
+
+def google_dork(target, dork, proxies=None):
+    headers = {'User-agent': ua.random}
     url = f'https://www.google.com/search?q=site:{target}+{dork}'
     try:
-        response = requests.get(url, headers=headers)
+        response = requests.get(url, headers=headers, proxies=proxies)
+        
+        # Check if the response is successful and has content
+        if response.status_code != 200 or not response.text:
+            print("Error: Unexpected response from the server.")
+            return []
+        
         soup = BeautifulSoup(response.text, 'html.parser')
         links = soup.find_all('a')
         result = []
         for link in links:
             href = link.get('href')
-            if "url?q=" in href and not "webcache" in href:
+            if "url?q=" in href and not "webcache" in href and not "support.google.com" in href and not "accounts.google.com" in href:
                 result.append(href.split("url?q=")[1].split("&")[0])
         return result
     except Exception as e:
         print(f"An error occurred: {e}")
         return []
 
-def main(target):
-    # Google dorkları üzerinde dön
+
+def main(target, proxy=None):
+    proxies = {
+        "http": proxy,
+        "https": proxy
+    } if proxy else None
+
     for dork in dorks:
         print(colored(f"Google Dork: {dork}", 'red', attrs=['bold']))
-        results = google_dork(target, dork)
-        # Her bir dork için bulunan sonuçları yazdır
+        results = google_dork(target, dork, proxies)
         if results:
             for i, result in enumerate(results, 1):
                 print(colored(f"{i}. {result}", 'blue'))
         else:
             print("No results found.")
-        # Google tarafından engellenmeyi önlemek için rastgele bir bekleme süresi
         time.sleep(random.uniform(3, 5))
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Google Dork tool')
     parser.add_argument('-u', '--url', help='Target URL', required=True)
+    parser.add_argument('-p', '--proxy', help='Proxy URL (e.g., http://127.0.0.1:8080)')
     args = parser.parse_args()
-    main(args.url)
-
+    main(args.url, args.proxy)
