@@ -8,10 +8,12 @@ t4dork is the fastest way to dive into the depths of the internet! It is a pente
 
 ## 🌟 Features
 
-- 🎯 Automatically applies more than 100 Google dorks.
+- 🎯 Automatically applies Google dorks.
 - 🌐 Comprehensive information gathering on the target site.
-- 📝 Provides results in an easily readable and well-organized format.
-- 👨‍💻 User-friendly and simple command line interface.
+- 🌍 Supports using custom proxy for the requests.
+- 🕵️ Random User-Agent for each request.
+- 📝 Provides results in an easily readable format.
+- 👨‍💻 User-friendly command line interface.
 
 ## 💻 Installation
 
@@ -29,6 +31,12 @@ It is very simple to use. Just run the application by specifying the target site
 
 ```
 python3 t4dork.py -u target.com
+```
+
+To use with a proxy:
+
+```
+python3 t4dork.py -u target.com -p http://127.0.0.1:8080
 ```
 
 ## 📄 License
