@@ -210,17 +210,16 @@ dorks = [
 
 ua = UserAgent()
 
+def load_proxies(proxy_file):
+    with open(proxy_file, 'r') as file:
+        return [{"http": line.strip(), "https": line.strip()} for line in file]
+
 def google_dork(target, dork, proxies=None):
     headers = {'User-agent': ua.random}
     url = f'https://www.google.com/search?q=site:{target}+{dork}'
+    proxy = random.choice(proxies) if proxies else None
     try:
-        response = requests.get(url, headers=headers, proxies=proxies)
-        
-        # Check if the response is successful and has content
-        if response.status_code != 200 or not response.text:
-            print("Error: Unexpected response from the server.")
-            return []
-        
+        response = requests.get(url, headers=headers, proxies=proxy)
         soup = BeautifulSoup(response.text, 'html.parser')
         links = soup.find_all('a')
         result = []
@@ -233,13 +232,8 @@ def google_dork(target, dork, proxies=None):
         print(f"An error occurred: {e}")
         return []
 
-
-def main(target, proxy=None):
-    proxies = {
-        "http": proxy,
-        "https": proxy
-    } if proxy else None
-
+def main(target, proxy_list=None):
+    proxies = load_proxies(proxy_list) if proxy_list else None
     for dork in dorks:
         print(colored(f"Google Dork: {dork}", 'red', attrs=['bold']))
         results = google_dork(target, dork, proxies)
@@ -253,6 +247,6 @@ def main(target, proxy=None):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Google Dork tool')
     parser.add_argument('-u', '--url', help='Target URL', required=True)
-    parser.add_argument('-p', '--proxy', help='Proxy URL (e.g., http://127.0.0.1:8080)')
+    parser.add_argument('-pl', '--proxy-list', help='File containing list of proxies', required=False)
     args = parser.parse_args()
-    main(args.url, args.proxy)
+    main(args.url, args.proxy_list)
