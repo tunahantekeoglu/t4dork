@@ -26,6 +26,16 @@ cd t4dork
 pip3 install -r requirements.txt
 ```
 
+## 💻 Installation
+
+The installation of T4Dork is straightforward. Just follow the steps below:
+
+```
+git clone https://github.com/tunahantekeoglu/t4dork.git
+cd t4dork
+pip3 install -r requirements.txt
+```
+
 ## 🎮 Usage
 
 It's simple to use. Run the application by specifying the target site:
@@ -46,14 +56,19 @@ To use with a proxy list:
 python3 t4dork.py -u target.com -pl proxies.txt
 ```
 
+**Example `proxies.txt` format:**
+
+```
+http://proxy1.example.com:8080
+http://proxy2.example.com:8080
+http://proxy3.example.com:8080
+```
+
 **Note:**
 1. When providing a proxy list, ensure that the proxies are up-to-date and operational.
 2. Ensure that the proxies support HTTPS traffic.
 3. If any proxy-related issues are encountered, check the proxies and try using different ones if necessary.
 
----
-
-Bu şekilde, kullanıcılara proxy listesi özelliği hakkında bilgi verilmiş olacak ve potansiyel sorunlara karşı bilgilendirilmiş olacaklardır.
 ## 📄 License
 
 This tool is published under the MIT License. Please see the [LICENSE](LICENSE) file for details.
