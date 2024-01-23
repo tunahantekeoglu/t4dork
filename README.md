@@ -81,8 +81,6 @@ T4Dork is designed for legal and ethical penetration testing. Unauthorized use i
 
 If you want to make improvements to this tool, please send a 'Pull Request' or add issues to the 'Issues' section. This tool thrives with the support of the community!
 
-Of course, below is a new design where you can make the addition you want:
-
 ---
 
 <div align="center">
